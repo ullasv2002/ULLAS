@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        let contact1= { Name: "ullas", phone:"9074933723",Email :"ullasv1970@gmail.com",
+        getinfo:function (){
+            return'Name:${this.name},phone:${this.phone},Email:${this.Email}';}
+       };
+        
+        function printcontactinfo(contact){console.log(contact.getinfo());}
+        let contact2={Name:"akash",phone:"99999999999",Emai:"uuuuuu@gmail.com",
+        getinfo:function(){
+            return'Name:${this.Name},phone:${this.phone},Email:${this.Email}';}
+        };
+        printcontactinfo(contact1);
+        printcontactinfo(contact2);
+    </script>
+</body>
+</html>    
