@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery Store Calculator</title>
+</head>
+<body>
+
+<h2>Grocery Store Calculator</h2>
+<p>Open the console (Ctrl + Shift + J) to see the output.</p>
+
+<script>
+    let purchases = 0;
+
+    while (purchases < 5) {
+
+        let code = Number(prompt("Enter product code (1-3):"));
+        let qty = Number(prompt("Enter quantity:"));
+
+        // Invalid code → skip
+        if (code < 1 || code > 3) {
+            console.log("Invalid code. Skipping this purchase...");
+            continue;
+        }
+
+        let price = 0;
+
+        // Switch statement
+        switch (code) {
+            case 1:
+                price = 30; // Apple
+                break;
+            case 2:
+                price = 10; // Banana
+                break;
+            case 3:
+                price = 50; // Mango
+                break;
+        }
+
+        let total = price * qty;
+
+        console.log("Product Code:", code);
+        console.log("Quantity:", qty);
+        console.log("Total Price: ₹" + total);
+
+        // If…else for High/Normal purchase
+        if (total > 100) {
+            console.log("High purchase");
+        } else {
+            console.log("Normal purchase");
+        }
+
+        console.log("-----------------------------");
+
+        purchases++;
+    }
+</script>
+
+</body>
+</html>
+</body>
+</html>

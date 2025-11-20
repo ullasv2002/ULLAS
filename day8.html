@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+</head>
+<body>
+
+<h2>Number Guessing Game</h2>
+<p>Check the console for game output (Ctrl + Shift + J).</p>
+
+<script>
+
+let attempts = 0;
+let correctNumber = 3;
+let validChances = 0;
+
+while (validChances < 5) {
+
+    let guess = Number(prompt("Enter a number between 1 and 5:"));
+    attempts++;
+
+    // Invalid input → skip chance
+    if (guess < 1 || guess > 5) {
+        console.log("Invalid input");
+        continue;
+    }
+
+    // Switch to display number in words
+    switch (guess) {
+        case 1: console.log("You entered: One"); break;
+        case 2: console.log("You entered: Two"); break;
+        case 3: console.log("You entered: Three"); break;
+        case 4: console.log("You entered: Four"); break;
+        case 5: console.log("You entered: Five"); break;
+    }
+
+    validChances++;
+
+    // Check win condition
+    if (guess === correctNumber) {
+        console.log("You guessed it right!");
+        break;
+    } else {
+        console.log("Wrong guess. Try again.");
+    }
+}
+
+// If game ended without correct guess
+if (validChances === 5) {
+    console.log("Game over");
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
